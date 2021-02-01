@@ -1,0 +1,636 @@
+//-----------------------
+// PERFIL DE COLOR
+//-----------------------
+$texto     :#111111;
+$principal : #12AFAF;
+$secundario: #009500;
+
+//-----------------------
+// DEFINIENDO FUENTES
+//-----------------------
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color      : $texto;
+}
+
+//-----------------------
+// ESTILOS DE HEADER
+//-----------------------
+.encabezado {
+    background: $texto;
+    color     : white;
+    padding   : 0.5rem 0;
+    transition: all 1s ease;
+}
+
+.encabezado.fondo-menu {
+    background: #064e4e;
+    padding   : 1rem 0;
+
+}
+
+.encabezado .container {
+    align-items: center;
+    display    : flex;
+
+}
+
+.encabezado .logo img {
+    width : 150px;
+    height: auto;
+}
+
+/*Estilos botones de busqueda y menú */
+.boton-buscar,
+.boton-menu {
+    background: transparent;
+    color     : white;
+    border    : none;
+    font-size : 2rem;
+    margin    : 0;
+    padding   : 0 .5rem;
+    outline   : none;
+}
+
+.btn:hover,
+.btn:hover,
+.btn:active,
+.btn:active,
+.btn:focus,
+.btn:focus {
+    outline         : 0;
+    border          : none;
+    background-color: transparent;
+}
+
+.boton-buscar {
+    margin-left : auto;
+    margin-right: .8rem;
+}
+
+/* Estilos bloque buscar */
+#bloque-buscar {
+    flex: 1 1 100%;
+}
+
+.contenedor-bloque-buscar {
+    display: flex;
+    height : 3rem;
+    margin : 1rem 0;
+}
+
+.contenedor-bloque-buscar input[type="text"] {
+    border       : none;
+    border-radius: 5px 0 0 5px;
+    flex         : 1 1 auto;
+    padding      : 0 1rem
+}
+
+.contenedor-bloque-buscar input[type="submit"] {
+    border          : none;
+    border-radius   : 0 5px 5px 0;
+    color           : white;
+    background-color: $principal;
+    padding         : 0 1rem;
+}
+
+/* Estilos menú de navegación*/
+#menu-principal {
+    flex   : 1 1 100%;
+    margin : 0;
+    padding: 0;
+}
+
+#menu-principal ul {
+    list-style    : none;
+    padding       : 0;
+    margin        : 1rem 0 0 0;
+    display       : flex;
+    flex-direction: column;
+
+}
+
+#menu-principal ul li a {
+    padding        : .8rem 0;
+    text-align     : center;
+    text-transform : uppercase;
+    color          : white;
+    display        : block;
+    height         : 100%;
+    text-decoration: none;
+    border-top     : 1px solid rgba(139, 139, 139, 0.993);
+}
+
+#menu-principal ul a:hover,
+#menu-principal ul li.active a {
+    color: $principal;
+}
+
+//------------------------------
+// ESTILOS DE SECCION BIENVENIDA
+//------------------------------
+.bienvenida {
+    background           : url("../images/fondo-encabezado.jpg") no-repeat center top;
+    color                : white;
+    background-size      : cover;
+    background-attachment: fixed !important;
+    height               : 100vh;
+
+    display       : flex;
+    flex-direction: column;
+}
+
+
+/*Estilo textos encabezado*/
+.texto-encabezado {
+    display    : flex;
+    flex       : 1 1 auto;
+    align-items: center;
+}
+
+.texto-encabezado .display-4 {
+    margin-top : 5.5rem;
+    line-height: 3.8rem;
+}
+
+
+/*Estilos botón contacto*/
+.texto-encabezado .btn-primary {
+    background-color: $principal;
+    border-color    : transparent;
+    margin-top      : 1rem;
+    padding         : 0.6rem 1.5rem;
+    transition      : all .5s ease;
+}
+
+.btn-primary:hover {
+    background-color: $secundario;
+    border-color    : transparent;
+}
+
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    background-color: $principal;
+    border-color    : transparent;
+}
+
+/*Flecha bajar*/
+.flecha-bajar a {
+    color    : white;
+    display  : inline-block;
+    font-size: 4rem;
+    animation: up-down 2s ease-in-out infinite;
+}
+
+@keyframes up-down {
+    from {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+//------------------------------
+// ESTILOS DE SECCION AGENCIA
+//------------------------------
+.agencia {
+    background-color: $principal;
+    color           : white;
+}
+
+.agencia img {
+    max-width: 80%;
+    margin   : 0 auto;
+    display  : block;
+}
+
+.agencia .row {
+    align-items: center;
+}
+
+//------------------------------
+// ESTILOS DE TU MEJOR ELECCIÓN
+//------------------------------
+h2 span {
+    color: $principal
+}
+
+.tu-mejor-eleccion ul {
+    list-style: none;
+}
+
+.tu-mejor-eleccion ul li {
+    min-height: 9rem;
+}
+
+.contenedor-eleccion h4 {
+    font-size    : 1.2rem;
+    font-weight  : bold;
+    margin-bottom: 0.8rem;
+}
+
+
+.tu-mejor-eleccion ul i {
+    background-color: $secundario;
+    color           : white;
+    width           : 4.8rem;
+    height          : 4.8rem;
+    line-height     : 4.8rem;
+    font-size       : 2.3rem;
+    margin-bottom   : 1rem;
+}
+
+//------------------------------
+// ESTILOS DE SECCIÓN SERVICIOS
+//------------------------------
+.servicios {
+    background           : url("../images/fondo-servicios.jpg") no-repeat center top;
+    background-size      : cover;
+    background-attachment: fixed !important;
+    color                : white;
+}
+
+.servicios img {
+    flex        : 0 0 60px;
+    overflow    : hidden;
+    margin-right: 1rem;
+}
+
+.servicios article {
+    display    : flex;
+    align-items: center;
+    margin     : 1rem 0;
+}
+
+.servicios h3 {
+    flex     : 1 1 auto;
+    margin   : 0;
+    font-size: 1rem;
+    color    : white;
+}
+
+.servicios article a {
+    color          : white;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    text-decoration: none;
+}
+
+.servicios article h3 a::after {
+    font-family: "Font Awesome 5 Free";
+    content    : "\f105";
+    font-weight: 900;
+    font-size  : 3rem;
+    opacity    : .5;
+    margin-left: 1rem;
+    position   : relative;
+    left       : 0;
+    transition : all .5s ease;
+}
+
+.servicios article h3 a:hover::after {
+    left   : -.5rem;
+    color  : $principal;
+    opacity: 1;
+}
+
+.servicios article .btn {
+    text-decoration: none;
+    color          : $texto;
+}
+
+//------------------------------
+// ESTILOS DE ULTIMOS PROYECTOS
+//------------------------------
+.ultimos-proyectos a {
+    text-decoration: none;
+}
+
+.ultimos-proyectos a h4 {
+    color        : #111111;
+    font-size    : 1rem;
+    text-align   : center;
+    font-weight  : bold;
+    margin-bottom: 1rem;
+}
+
+.ultimos-proyectos .owl-nav {
+    text-align: center;
+    color     : $principal;
+    font-size : 2.6rem;
+}
+
+.ultimos-proyectos i {
+    padding   : 1rem .5rem;
+    transition: all .5s ease;
+}
+
+.ultimos-proyectos i:hover {
+    color: $secundario;
+}
+
+//------------------------------
+// ESTILOS DE FOOTER
+//------------------------------
+.pie-de-pagina {
+    background-color: $texto;
+    color           : white;
+    text-align      : center;
+}
+
+.pie-de-pagina ul {
+    list-style: none;
+    padding   : 0;
+    font-size : 2rem;
+}
+
+.pie-de-pagina a {
+    color          : white;
+    text-decoration: none;
+    opacity        : .5;
+    margin         : 0 .3rem;
+    transition     : all .5s ease;
+}
+
+.pie-de-pagina a:hover {
+    opacity: 1;
+}
+
+/*Boton subir*/
+.ir-arriba {
+    display        : none;
+    font-size      : 2.5rem;
+    color          : $principal;
+    position       : fixed;
+    bottom         : 1rem;
+    right          : 1rem;
+    text-decoration: none;
+    z-index        : 99999;
+    line-height    : 0;
+    transition     : all 2s ease;
+}
+
+.ir-arriba:hover,
+.ir-arriba:focus {
+    outline        : 0;
+    text-decoration: none;
+    color          : $secundario;
+
+}
+
+//------------------------------
+// ESTILOS PAGINA NOSOTROS
+//------------------------------
+.paginas-internas .bienvenida {
+    height: 50vh;
+}
+
+.paginas-internas .ruta {
+    background-color: $principal;
+    padding         : 1rem;
+    color           : white;
+}
+
+.paginas-internas .ruta a {
+    color          : white;
+    text-decoration: underline;
+
+}
+
+.paginas-internas .ruta a:hover {
+    text-decoration: none;
+}
+
+.paginas-internas .card .btn-primary {
+    font-size: 1.2rem;
+}
+
+//------------------------------
+// ESTILOS PAGINA SERVICIOS
+//------------------------------
+.paginas-internas .lista-servicios {
+    background: $secundario;
+}
+
+.paginas-internas .lista-servicios article {
+    background-color: white;
+    display         : flex;
+    flex-direction  : column;
+    padding         : 1rem;
+    text-align      : center;
+    border          : 5px solid #057705;
+    border-radius   : 5px;
+    margin-bottom   : 1rem;
+    align-items     : center;
+}
+
+.paginas-internas .lista-servicios i {
+    font-size    : 5rem;
+    color        : #12AFAF;
+    margin-bottom: 1rem;
+    transition   : all 1s ease;
+}
+
+.paginas-internas .lista-servicios article:hover i {
+    transform      : rotateY(360deg);
+    transform-style: preserve-3d;
+}
+
+.paginas-internas .lista-servicios article .btn {
+    margin          : 0;
+    padding         : .3rem 1rem;
+    margin-top      : auto;
+    background-color: $principal;
+    border-color    : transparent;
+    transition      : all .5s ease;
+}
+
+.paginas-internas .lista-servicios article .btn:hover {
+    background-color: $secundario;
+    border-color    : transparent;
+}
+
+//------------------------------
+// ESTILOS PAGINA CONTACTO
+//------------------------------
+.paginas-internas .formulario-contacto .btn-primary {
+    background-color: $principal;
+    border-color    : transparent;
+    transition      : all .5s ease;
+}
+
+.paginas-internas .formulario-contacto .btn-primary:hover {
+    background-color: $secundario;
+    border-color    : transparent;
+}
+
+.paginas-internas .formulario-contacto .btn-light {
+    border-color: lightgrey;
+}
+
+
+//------------------------------
+// DEFINICIÓN DE MEDIAS QUERY
+//------------------------------
+
+/*Vista Tablet*/
+@media(min-width: 768px) {
+
+    //--- Header ---//
+
+    #menu-principal {
+        display    : block;
+        height     : auto;
+        order      : 1;
+        flex       : 0 1 auto;
+        margin-left: auto;
+    }
+
+    #menu-principal ul {
+        display       : flex;
+        flex-direction: row;
+        margin        : 0;
+    }
+
+    #menu-principal ul li a {
+        padding       : .8rem;
+        margin        : 0 .3rem;
+        text-transform: capitalize;
+        border-top    : none;
+        transition    : all .5s ease;
+        border-bottom : 4px solid transparent;
+    }
+
+    #menu-principal ul li.active a,
+    #menu-principal ul li a:hover {
+        border-bottom: 4px solid $principal;
+    }
+
+    .boton-buscar {
+        margin-right: 0;
+        margin-left : 1rem;
+        order       : 2;
+    }
+
+    #bloque-buscar {
+        order     : 3;
+        flex      : 0 1 auto;
+        position  : absolute;
+        width     : 20rem;
+        right     : 3rem;
+        top       : 3.3rem;
+        transition: all .5s ease;
+    }
+
+    //--- Sección servicios ---//
+    .servicios article {
+        flex-direction: column;
+        text-align    : center;
+    }
+
+    .servicios article h3 a::after {
+        content: "";
+    }
+
+    .servicios article h3 {
+        font-size: 1.5rem;
+        margin   : .5rem 0;
+        flex     : 0 1 auto;
+
+    }
+
+    .servicios img {
+        flex      : 0 0 160px;
+        margin    : 0.5rem 0;
+        transition: all 1s ease;
+    }
+
+    .servicios article:hover img {
+        transform      : rotateY(360deg);
+        transform-style: preserve-3d;
+    }
+
+    .servicios article .btn {
+        padding    : .7rem 1rem;
+        line-height: 1rem;
+        margin-top : auto;
+    }
+
+    //--- Pagina Servicios ---//
+    .paginas-internas .lista-servicios .col-md-4 {
+        display: flex;
+    }
+
+
+}
+
+@media(min-width: 992px) {
+
+    //--- Ajuste de Fuentes ---//
+    html {
+        font-size: 16px;
+    }
+
+    .bienvenida {
+        background     : url("../images/fondo-encabezado-grande.jpg") no-repeat center top;
+        background-size: cover;
+    }
+
+    .servicios {
+        background     : url("../images/fondo-servicios-grande.jpg") no-repeat center top;
+        background-size: cover;
+    }
+
+    //--- Sección tu mejor elección ---//
+    .tu-mejor-eleccion ul i {
+        text-align: center;
+        flex      : 0 1 auto;
+        margin    : 0 1rem 0 0;
+        transition: all 1s ease;
+    }
+
+    .tu-mejor-eleccion .contenedor-eleccion {
+        flex: 1 0 0px;
+    }
+
+    .tu-mejor-eleccion .contenedor-eleccion h4 {
+        font-size    : 1rem;
+        margin-bottom: .5rem;
+    }
+
+    .tu-mejor-eleccion .contenedor-eleccion p {
+        font-size    : .85rem;
+        margin-bottom: 1rem;
+    }
+
+    .tu-mejor-eleccion ul li {
+        display    : flex;
+        align-items: flex-start;
+        min-height : 7rem;
+    }
+
+    .tu-mejor-eleccion ul:first-child i {
+        order : 1;
+        margin: 0 0 0 1rem;
+    }
+
+    .tu-mejor-eleccion li:hover i {
+        transform      : rotateY(360deg);
+        transform-style: preserve-3d;
+        background     : $principal;
+    }
+
+}
